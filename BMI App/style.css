@@ -1,0 +1,51 @@
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bubble {
+    background-color: rgba(0, 0, 255, 0.5); /*Blue bubbles*/
+    border-radius: 50%;
+    animation: bubble-animation 10s linear infinite;
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes bubble-animation {
+    0%, 50% {
+        background-color: rgba(0,0,255,0.5); /* Blueish */
+    }
+    50%, 100% {
+        background-color: rgba(0, 128, 255,0.5);  /* Light Blue */
+    }
+}
+
+@media (min-width: 768px) {
+    .bubble {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bubble {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.btn-reset {
+  background-color: #28a745; /* Green */
+  border-color: #218838; /* Darker green */
+}

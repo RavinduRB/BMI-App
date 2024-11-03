@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">BMI Calculator</h1>
+        <div class="card">
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="height" class="form-label">Height (cm):</label>
+                    <input type="number" class="form-control" id="height" step="0.1">
+                </div>
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Weight (kg):</label>
+                    <input type="number" class="form-control" id="weight">
+                </div>
+                <div class="d-grid gap-2">
+                    <button id="calculate" class="btn btn-primary">Calculate BMI</button>
+                    <button id="reset" class="btn btn-success btn-reset">Reset</button>
+                </div>
+            </div>
+        </div>
+        <div id="results" class="card mt-4">
+            <div class="card-body">
+                <h2 class="card-title">Results:</h2>
+                <canvas id="myChart"></canvas>
+                <p class="card-text">Your BMI is: <span id="bmi"></span></p>
+                <p class="card-text">Your BMI Category: <span id="bmiCategory"></span></p>
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
